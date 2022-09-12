@@ -1,6 +1,0 @@
-{
-  "todos": [
-    { "id": "1", "text": "todo data 1", "completed": true },
-    { "id": "2", "text": "todo data 2", "completed": false }
-  ]
-}

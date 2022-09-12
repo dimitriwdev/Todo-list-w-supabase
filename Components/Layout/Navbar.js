@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import Link from "next/link";
 import React from "react";
 
 export default function Navbar() {
@@ -18,7 +17,7 @@ export default function Navbar() {
 
     return (
       <button
-        className="flex justify-around items-center mr-4 px-4 py-2 rounded text-white bg-zinc-800 dark:text-zinc-800 dark:bg-white"
+        className="flex justify-around items-center mr-4 px-4 py-2 rounded text-green-600 bg-zinc-800 dark:text-zinc-800 dark:bg-green-600"
         onClick={() =>
           currentTheme === "dark" ? setTheme("light") : setTheme("dark")
         }
@@ -29,22 +28,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="h-20 px-4 flex justify-between items-center border-b border-zinc-500 dark:border-cyan-500">
-      <div>
-        <Link href="/">
-          <a className="text-lg font-bold px-8 py-4">Home</a>
-        </Link>
-        <Link href="/todo-supa">
-          <a className="text-lg font-bold px-8 py-4">Todo&nbsp;Supa</a>
-        </Link>
-      </div>
-      <div className="flex items-center">
+    <nav className="h-20 px-4 flex justify-between items-center border-b border-zinc-500 dark:border-green-600">
+      <h1>Supabase <span className="text-green-600">+</span> Tailwind</h1>
+      <div className="">
         {renderThemeChanger()}
-        <Link href="/auth">
-          <a>
-            <button className="text-lg ml-2 p-2">Log in</button>
-          </a>
-        </Link>
       </div>
     </nav>
   );
